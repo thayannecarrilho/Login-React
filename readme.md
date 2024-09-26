@@ -1,6 +1,6 @@
 # Projeto de Login
 
-Este repositório contém um projeto simples de login utilizando MySQL como banco de dados, Node no backend e React no frontend
+Este repositório contém um projeto simples de login utilizando MySQL como banco de dados, Node no backend e React no frontend.
 
 <img src='./imgs/Login.gif' />
 
@@ -29,12 +29,13 @@ CREATE TABLE users (
 
 O backend é implementado em Node.js. A conexão com o banco de dados é configurada no arquivo `server.js`.
 
-### 1. Instalar Dependências
+### 1. Instalar Dependências do Backend
 
-Certifique-se de ter o MySQL e Node.js instalados. Para instalar as dependências necessárias, execute:
+Certifique-se de ter o MySQL e Node.js instalados. Para instalar as dependências necessárias do backend, execute:
 
 ```bash
-npm install mysql
+cd backend
+npm install
 ```
 
 ### 2. Configuração da Conexão
@@ -50,6 +51,17 @@ const db = mysql.createConnection({
     password: 'sua senha', // Substitua pela sua senha
     database: 'login',
 });
+```
+
+## Configuração do Frontend
+
+### 1. Instalar Dependências do Frontend
+
+Para instalar as dependências necessárias do frontend, execute:
+
+```bash
+cd frontend
+npm install
 ```
 
 ## Como Iniciar
@@ -73,10 +85,3 @@ node backend/server.js
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou um pull request.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
-
-
