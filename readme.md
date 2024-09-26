@@ -47,8 +47,8 @@ const mysql = require('mysql');
 
 const db = mysql.createConnection({
     host: 'localhost',
-    user: 'seulogin', // Substitua pelo seu usuário
-    password: 'sua senha', // Substitua pela sua senha
+    user: 'root', // Substitua pelo seu usuário
+    password: 'thayanne', // Substitua pela sua senha
     database: 'login',
 });
 ```
@@ -79,7 +79,8 @@ npm start
 Para iniciar o backend, execute o seguinte comando no terminal:
 
 ```bash
-node backend/server.js
+cd backend
+node server.js
 ```
 
 ## Contribuição
