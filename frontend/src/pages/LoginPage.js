@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Container, ContainerLogo, SubContainer } from '../components/Container/styles'
+import { Form } from '../components/Input/styles'
+import Button from '../components/Button'
+import Logo from '../assets/logo.gif'
+
 
 const Login = () => {
     const [username, setUsername] = useState('');
@@ -24,10 +29,14 @@ const Login = () => {
     };
 
     return (
-        <div>
-            <h2>Login</h2>
+        <Container>
+            <ContainerLogo>
+                <img className="Logo" alt="Logo" src={Logo}/>  
+            </ContainerLogo>                      
+            <SubContainer>
+            <h2>Faça seu login aqui!</h2>
             {message && <p>{message}</p>}
-            <form onSubmit={handleLogin}>
+            <Form onSubmit={handleLogin}>
                 <input
                     type="text"
                     placeholder="Usuário"
@@ -42,12 +51,13 @@ const Login = () => {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                 />
-                <button type="submit">Login</button>
-            </form>
+                 <Button title="Entrar" onClick={handleLogin} />
+            </Form>
             <p>
                 Não tem uma conta? <a href="/register">Registrar</a>
             </p>
-        </div>
+            </SubContainer>            
+        </Container>
     );
 };
 
